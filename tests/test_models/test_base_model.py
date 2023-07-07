@@ -39,3 +39,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(my_model_json['__class__'], 'BaseModel')
         self.assertEqual(my_model_json['name'], 'My First Model')
         self.assertEqual(my_model_json['my_number'], 89)
+
+
+if __name__ == '__main__':
+    unittest.main()
