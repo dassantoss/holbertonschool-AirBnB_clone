@@ -47,6 +47,27 @@ class TestBaseModel(unittest.TestCase):
                                                        my_model.__dict__)
         self.assertEqual(str(my_model), expected_output)
 
+    def test_create_from_dict(self):
+        '''Test creating a BaseModel instance from a dictionary'''
+        my_model_dict = {
+            'id': '1234',
+            'created_at': '2023-01-01T12:00:00.000000',
+            'updated_at': '2023-01-01T12:00:00.000000',
+            'name': 'My Model',
+            'my_number': 42
+        }
+        my_model = BaseModel(**my_model_dict)
+
+        self.assertEqual(my_model.id, '1234')
+        self.assertEqual(my_model.created_at.year, 2023)
+        self.assertEqual(my_model.created_at.month, 1)
+        self.assertEqual(my_model.created_at.day, 1)
+        self.assertEqual(my_model.updated_at.year, 2023)
+        self.assertEqual(my_model.updated_at.month, 1)
+        self.assertEqual(my_model.updated_at.day, 1)
+        self.assertEqual(my_model.name, 'My Model')
+        self.assertEqual(my_model.my_number, 42)
+
 
 if __name__ == '__main__':
     unittest.main()
