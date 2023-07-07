@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 #Test files
-test_punto3.py
+test_punto*.py
