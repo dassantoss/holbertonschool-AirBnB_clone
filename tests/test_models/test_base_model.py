@@ -40,6 +40,13 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(my_model_json['name'], 'My First Model')
         self.assertEqual(my_model_json['my_number'], 89)
 
+    def test_str_method(self):
+        '''Test the __str__() method of a BaseModel instance'''
+        my_model = BaseModel()
+        expected_output = "[BaseModel] ({}) {}".format(my_model.id,
+                                                       my_model.__dict__)
+        self.assertEqual(str(my_model), expected_output)
+
 
 if __name__ == '__main__':
     unittest.main()
