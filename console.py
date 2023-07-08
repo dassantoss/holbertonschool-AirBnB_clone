@@ -104,6 +104,7 @@ class HBNBCommand(cmd.Cmd):
                 instances = [str(obj) for obj in storage.all().values()]
             if instances == []:
                 print("** class doesn't exist **")
+                return
             print(instances)
         except NameError:
             print("** class doesn't exist **")
