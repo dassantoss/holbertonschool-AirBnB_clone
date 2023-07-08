@@ -99,13 +99,13 @@ class HBNBCommand(cmd.Cmd):
         try:
             if arg:
                 instances = [str(obj) for key, obj in storage.all().items()
-                            if arg == key.split(' ')[0]]
+                            if arg.lower() == key.split('.')[0].lower()]
             else:
                 instances = [str(obj) for obj in storage.all().values()]
-            if instances == []:
+            if not instances:
                 print("** class doesn't exist **")
-                return
-            print(instances)
+            else:
+                print(instances)
         except NameError:
             print("** class doesn't exist **")
 
