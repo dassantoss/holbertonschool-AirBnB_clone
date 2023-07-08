@@ -5,6 +5,7 @@
 import cmd
 from models.base_model import BaseModel
 from models import storage
+import shlex
 
 
 class HBNBCommand(cmd.Cmd):
@@ -98,12 +99,15 @@ class HBNBCommand(cmd.Cmd):
         try:
             if arg:
                 instances = [str(obj) for key, obj in storage.all().items()
-                             if arg == key.split('.')[0]]
+                            if arg == key.split(' ')[0]]
             else:
                 instances = [str(obj) for obj in storage.all().values()]
+            if instances == []:
+                print("** class doesn't exist **")
             print(instances)
         except NameError:
             print("** class doesn't exist **")
+
 
     def do_update(self, arg):
         '''Updates an instance based on the class name and id by adding
