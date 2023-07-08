@@ -99,7 +99,7 @@ class HBNBCommand(cmd.Cmd):
         try:
             if arg:
                 instances = [str(obj) for key, obj in storage.all().items()
-                            if arg.lower() == key.split('.')[0].lower()]
+                             if arg.lower() == key.split('.')[0].lower()]
             else:
                 instances = [str(obj) for obj in storage.all().values()]
             if not instances:
@@ -108,7 +108,6 @@ class HBNBCommand(cmd.Cmd):
                 print(instances)
         except NameError:
             print("** class doesn't exist **")
-
 
     def do_update(self, arg):
         '''Updates an instance based on the class name and id by adding
