@@ -2,6 +2,7 @@
 '''Unit tests for the BaseModel class.'''
 import unittest
 from models.base_model import BaseModel
+from models import storage
 
 
 class TestBaseModel(unittest.TestCase):
@@ -9,11 +10,12 @@ class TestBaseModel(unittest.TestCase):
 
     def setUp(self):
         '''Set up any data needed for the test.'''
-        pass
+        storage.clear()
+        self.my_model = BaseModel
 
     def tearDown(self):
         '''Clean up any resorces used during the test.'''
-        pass
+        del self.my_model
 
     def test_initial_attributes(self):
         '''Test the initial attributes of a BaseModel instance.'''
