@@ -5,7 +5,7 @@
 * **Santiago Echeverri** <[dassantoss](https://github.com/dassantoss)>
 
 <p align="center">
-  <img src="https://github.com/dassantoss/holbertonschool-AirBnB_clone/assets/65f4a1dd9c51265f49d0.png" alt="HBnB logo">
+  <img src="https://github.com/dassantoss/holbertonschool-AirBnB_clone/blob/main/assets/logo.png" alt="HBnB logo">
 </p>
 
 ## Description
