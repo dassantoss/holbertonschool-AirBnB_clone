@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+} 
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 800px) {
+    /* Reduce font size for better readability on smaller screens */
+    body {
+      font-size: 12px;
+    }
+  
+    .container {
+      padding: 0 10px; /* Further reduce padding for smaller screens */
+    }
+  }
